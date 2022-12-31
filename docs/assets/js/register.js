@@ -30,6 +30,7 @@ next_click.forEach(function(next_page){
 
 back_click.forEach(function(back_page){
     back_page.addEventListener('click',function(){
+        progress_backward();
          formnumber--;
          updateform();   
     });
@@ -48,7 +49,9 @@ function progress_forward(){
     list[formnumber].classList.add('active');
 }
 
-
+function progress_backward(){
+    list[formnumber].classList.remove('active');
+}
 
 function updateform(){
     main_form.forEach(function(main_number){ 
